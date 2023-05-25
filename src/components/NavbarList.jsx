@@ -3,9 +3,16 @@
 import Image from "next/image";
 import React from "react";
 
-function NavbarList() {
+function NavbarList({ className }) {
   return (
-    <>
+    <nav className={className}>
+      <Image
+        src="/hamburger.png"
+        width={56}
+        height={56}
+        loading="lazy"
+        className="md:hidden"
+      />
       <div className="hidden md:block">
         <div className="flex justify-end gap-x-9">
           <a
@@ -34,15 +41,7 @@ function NavbarList() {
           </a>
         </div>
       </div>
-      <div className="w-14 h-14 mx-6 md:hidden">
-        <Image
-          src="/hamburger.png"
-          width={56}
-          height={56}
-          alt="hambuger-icon"
-        />
-      </div>
-    </>
+    </nav>
   );
 }
 
