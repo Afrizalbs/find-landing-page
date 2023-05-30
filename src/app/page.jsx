@@ -12,7 +12,7 @@ export default function Home() {
         <header className="flex flex-col min-h-screen container mx-auto">
           <NavbarList className="md:py-9 flex justify-center lg:pt-9 lg:pb-0 lg:justify-end" />
           <section className="flex">
-            <h1 className="lg:text-[200px] md:text-8xl font-bold -mt-3 lg:-mt-5">
+            <h1 className="lg:text-[200px] md:text-9xl font-bold -mt-3 lg:-mt-5">
               Find
             </h1>
             <figure className="lg:w-16 lg:h-16 md:w-8 md:h-8">
@@ -25,7 +25,7 @@ export default function Home() {
               />
             </figure>
             <div className="flex grow justify-end items-center">
-              <p className="font-bold lg:text-6xl lg:w-[470px] md:text-3xl md:w-56">
+              <p className="font-bold lg:text-6xl lg:w-[470px] md:text-4xl md:w-64">
                 Free Vehicle History Check
               </p>
             </div>
@@ -34,7 +34,7 @@ export default function Home() {
 
         <section className="grid grid-cols-5">
           <div className="box-border bg-white bg-opacity-20 backdrop-blur pl-20 col-span-2 grid content-center md:align-middle">
-            <p className="font-bold lg:text-3xl md:text-xl">
+            <p className="font-bold text-lg lg:text-3xl">
               Verified Instant Car Check.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
         </section>
 
         <section className="grid grid-cols-5">
-          <div className="col-span-2 bg-[#17191A] bg-opacity-60 backdrop-blur px-20 py-5 lg:p-20">
+          <div className="col-span-2 bg-[#17191A] bg-opacity-60 backdrop-blur pl-20 pr-10  py-5 lg:p-20">
             <p className="text-sm text-justify lg:font-semibold lg:text-xl">
               Whether you’re looking to ensure a fair price for a used vehicle,
               guarantee you get the best price for your current car or something
@@ -94,8 +94,9 @@ export default function Home() {
               width={300}
               height={300}
               loading="lazy"
+              className="w-[170px] h-[170px] lg:w-[300px] lg:h-[300px]"
             />
-            <p className="col-span-2 font-bold text-5xl leading-tight text-justify">
+            <p className="col-span-2 font-bold text-2xl lg:text-5xl leading-tight text-justify">
               In a matter of seconds, we check your vehicle against the major
               databases to make sure everything is as you expect it to be. You
               get all the relevant information to give you peace of mind over
@@ -103,50 +104,21 @@ export default function Home() {
             </p>
             <div> </div>
             <div className="col-span-2 mt-16 grid grid-cols-2 gap-16">
-              <div>
-                <Image src="/header-section.png" width={384} height={72} />
-                <p className="font-bold text-2xl my-6">
-                  Technical Specifications
-                </p>
-                <p className="font-medium text-base">
-                  Understanding vehicle specs like dimensions, BPH and anti-lock
-                  braking system is crucial. All this and more can be found out
-                  when you undertake our free car check.
-                </p>
-              </div>
-              <div>
-                <Image src="/header-section.png" width={384} height={72} />
-                <p className="font-bold text-2xl my-6">
-                  Technical Specifications
-                </p>
-                <p className="font-medium text-base">
-                  Understanding vehicle specs like dimensions, BPH and anti-lock
-                  braking system is crucial. All this and more can be found out
-                  when you undertake our free car check.
-                </p>
-              </div>
-              <div>
-                <Image src="/header-section.png" width={384} height={72} />
-                <p className="font-bold text-2xl my-6">
-                  Technical Specifications
-                </p>
-                <p className="font-medium text-base">
-                  Understanding vehicle specs like dimensions, BPH and anti-lock
-                  braking system is crucial. All this and more can be found out
-                  when you undertake our free car check.
-                </p>
-              </div>
-              <div>
-                <Image src="/header-section.png" width={384} height={72} />
-                <p className="font-bold text-2xl my-6">
-                  Technical Specifications
-                </p>
-                <p className="font-medium text-base">
-                  Understanding vehicle specs like dimensions, BPH and anti-lock
-                  braking system is crucial. All this and more can be found out
-                  when you undertake our free car check.
-                </p>
-              </div>
+              {Array(4)
+                .fill()
+                .map(() => (
+                  <div>
+                    <Image src="/header-section.png" width={384} height={72} />
+                    <p className="font-bold text-xl lg:text-2xl my-6">
+                      Technical Specifications
+                    </p>
+                    <p className="font-medium text-sm lg:text-base">
+                      Understanding vehicle specs like dimensions, BPH and
+                      anti-lock braking system is crucial. All this and more can
+                      be found out when you undertake our free car check.
+                    </p>
+                  </div>
+                ))}
             </div>
           </div>
         </section>
@@ -154,19 +126,19 @@ export default function Home() {
         <section className="bg-white">
           <div className="container mx-auto py-10">
             <div className="flex">
-              <h2 className="text-[#191D2B] font-bold text-[150px] leading-none">
+              <h2 className="text-[#191D2B] font-bold text-9xl lg:text-[150px] leading-none">
                 Find
               </h2>
-              <span className="w-16 h-16">
+              <figure className="w-10 h-10 lg:w-16 lg:h-16">
                 <Image
                   src="/Vector-black.png"
                   alt="icon"
                   width={64}
                   height={64}
                 />
-              </span>
+              </figure>
             </div>
-            <h2 className="text-[#191D2B] font-bold text-[150px] leading-none">
+            <h2 className="text-[#191D2B] font-bold text-9xl lg:text-[150px] leading-none">
               Experience
             </h2>
 
@@ -183,103 +155,32 @@ export default function Home() {
                 <div className="justify-end">
                   <button
                     type="button"
-                    className="bg-[#191D2B] px-10 py-4 rounded-full"
+                    className="bg-[#191D2B] px-10 py-4 rounded-full text-sm lg:text-base"
                   >
                     Check Vehicle Now
                   </button>
                 </div>
               </div>
               <div className="col-span-2 grid grid-cols-2 gap-x-16 gap-y-10">
-                <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
-                  <div className="flex gap-6">
-                    <p className="text-[#191D2B] font-bold text-2xl group-hover:text-[#BD7254]">
-                      Car Finance Check
-                    </p>
-                    <Image src="/arrow-right.svg" width={24} height={24} />
-                  </div>
-                  <p className="text-[#96A0B5] text-base font-medium mt-6 text-justify">
-                    This isn’t a step you want to skip. The last thing you want
-                    is to finally get your hands on your nice new car, only to
-                    find out there’s outstanding finance that you need to cover.
-                    It’s a costly mistake, but one you can avoid easily with our
-                    car finance check.
-                  </p>
-                </div>
-                <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
-                  <div className="flex gap-6">
-                    <p className="text-[#191D2B] font-bold text-2xl group-hover:text-[#BD7254]">
-                      Car Finance Check
-                    </p>
-                    <Image src="/arrow-right.svg" width={24} height={24} />
-                  </div>
-                  <p className="text-[#96A0B5] text-base font-medium mt-6 text-justify">
-                    This isn’t a step you want to skip. The last thing you want
-                    is to finally get your hands on your nice new car, only to
-                    find out there’s outstanding finance that you need to cover.
-                    It’s a costly mistake, but one you can avoid easily with our
-                    car finance check.
-                  </p>
-                </div>
-                <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
-                  <div className="flex gap-6">
-                    <p className="text-[#191D2B] font-bold text-2xl group-hover:text-[#BD7254]">
-                      Car Finance Check
-                    </p>
-                    <Image src="/arrow-right.svg" width={24} height={24} />
-                  </div>
-                  <p className="text-[#96A0B5] text-base font-medium mt-6 text-justify">
-                    This isn’t a step you want to skip. The last thing you want
-                    is to finally get your hands on your nice new car, only to
-                    find out there’s outstanding finance that you need to cover.
-                    It’s a costly mistake, but one you can avoid easily with our
-                    car finance check.
-                  </p>
-                </div>
-                <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
-                  <div className="flex gap-6">
-                    <p className="text-[#191D2B] font-bold text-2xl group-hover:text-[#BD7254]">
-                      Car Finance Check
-                    </p>
-                    <Image src="/arrow-right.svg" width={24} height={24} />
-                  </div>
-                  <p className="text-[#96A0B5] text-base font-medium mt-6 text-justify">
-                    This isn’t a step you want to skip. The last thing you want
-                    is to finally get your hands on your nice new car, only to
-                    find out there’s outstanding finance that you need to cover.
-                    It’s a costly mistake, but one you can avoid easily with our
-                    car finance check.
-                  </p>
-                </div>
-                <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
-                  <div className="flex gap-6">
-                    <p className="text-[#191D2B] font-bold text-2xl group-hover:text-[#BD7254]">
-                      Car Finance Check
-                    </p>
-                    <Image src="/arrow-right.svg" width={24} height={24} />
-                  </div>
-                  <p className="text-[#96A0B5] text-base font-medium mt-6 text-justify">
-                    This isn’t a step you want to skip. The last thing you want
-                    is to finally get your hands on your nice new car, only to
-                    find out there’s outstanding finance that you need to cover.
-                    It’s a costly mistake, but one you can avoid easily with our
-                    car finance check.
-                  </p>
-                </div>
-                <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
-                  <div className="flex gap-6">
-                    <p className="text-[#191D2B] font-bold text-2xl group-hover:text-[#BD7254]">
-                      Car Finance Check
-                    </p>
-                    <Image src="/arrow-right.svg" width={24} height={24} />
-                  </div>
-                  <p className="text-[#96A0B5] text-base font-medium mt-6 text-justify">
-                    This isn’t a step you want to skip. The last thing you want
-                    is to finally get your hands on your nice new car, only to
-                    find out there’s outstanding finance that you need to cover.
-                    It’s a costly mistake, but one you can avoid easily with our
-                    car finance check.
-                  </p>
-                </div>
+                {Array(6)
+                  .fill()
+                  .map(() => (
+                    <div className="border-t-2 border-[#191D2B] group hover:border-[#BD7254] pt-6">
+                      <div className="flex gap-6">
+                        <p className="text-[#191D2B] font-bold text-xl lg:text-2xl group-hover:text-[#BD7254]">
+                          Car Finance Check
+                        </p>
+                        <Image src="/arrow-right.svg" width={24} height={24} />
+                      </div>
+                      <p className="text-[#96A0B5] text-sm lg:text-base font-medium mt-6 text-justify">
+                        This isn’t a step you want to skip. The last thing you
+                        want is to finally get your hands on your nice new car,
+                        only to find out there’s outstanding finance that you
+                        need to cover. It’s a costly mistake, but one you can
+                        avoid easily with our car finance check.
+                      </p>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
@@ -287,9 +188,9 @@ export default function Home() {
 
         <section className="bg-pricing bg-cover">
           <div className="grid grid-cols-3 min-h-screen">
-            <div className="p-20 flex flex-col">
-              <h3 className="font-bold text-6xl mb-10">Pricing</h3>
-              <p className="font-light text-lg text-justify flex-1">
+            <div className="px-10 py-20 lg:p-20 flex flex-col">
+              <h3 className="font-bold text-4xl lg:text-6xl mb-10">Pricing</h3>
+              <p className="font-light text-sm lg:text-lg text-justify flex-1">
                 Find offer the most comprehensive free car check on the market -
                 including a full history report on everything there is to know
                 about any car in the World. We provide reliable, detailed
@@ -297,72 +198,57 @@ export default function Home() {
                 you’re dealing with. Perfect for car buyers, sellers and
                 dealerships.
               </p>
-              <Image src="/arrow-right-white.svg" width={72} height={72} />
+              <Image
+                src="/arrow-right-white.svg"
+                width={72}
+                height={72}
+                className="w-14 h-14 lg:h-[72px] lg:w-[72px] "
+              />
             </div>
-            <div className="bg-[#454547CC] p-20 flex flex-col">
-              <h3 className="font-bold text-6xl">FREE</h3>
+            <div className="bg-[#454547CC] px-10 py-20 lg:p-20 flex flex-col">
+              <h3 className="font-bold text-4xl lg:text-6xl">FREE</h3>
               <p className="mt-2">Free Car Check</p>
               <div className="flex flex-1 flex-col gap-y-6 mt-10">
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
+                {Array(5)
+                  .fill()
+                  .map(() => (
+                    <div className="flex gap-5">
+                      <Image src="/tick-circle.svg" width={24} height={24} />
+                      <p className="text-sm lg:text-base">
+                        Vehicle Make, Model Colour
+                      </p>
+                    </div>
+                  ))}
               </div>
               <div>
                 <button
                   type="button"
-                  className="bg-white text-[#191D2B] font-bold text-lg px-10 py-4 rounded-full"
+                  className="bg-white text-[#191D2B] font-bold text-sm lg:text-lg px-10 py-4 rounded-full"
                 >
                   Check Now
                 </button>
               </div>
             </div>
 
-            <div className="p-20 bg-[#BD7254] flex flex-col">
-              <h3 className="font-bold text-6xl">$19.99</h3>
+            <div className="px-10 py-20 lg:p-20 bg-[#BD7254] flex flex-col">
+              <h3 className="font-bold text-4xl lg:text-6xl">$19.99</h3>
               <p className="mt-2">Full Car Check</p>
               <div className="flex flex-1 flex-col gap-y-6 mt-10">
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
-                <div className="flex gap-5">
-                  <Image src="/tick-circle.svg" width={24} height={24} />
-                  <p>Vehicle Make, Model Colour</p>
-                </div>
+                {Array(5)
+                  .fill()
+                  .map(() => (
+                    <div className="flex gap-5">
+                      <Image src="/tick-circle.svg" width={24} height={24} />
+                      <p className="text-sm lg:text-base">
+                        Vehicle Make, Model Colour
+                      </p>
+                    </div>
+                  ))}
               </div>
               <div>
                 <button
                   type="button"
-                  className="bg-white text-[#191D2B] font-bold text-lg px-10 py-4 rounded-full"
+                  className="bg-white text-[#191D2B] font-bold text-sm lg:text-lg px-10 py-4 rounded-full"
                 >
                   Buy Now
                 </button>
@@ -371,18 +257,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="min-h-screen bg-[#17191A] p-20">
+        <section className="max-h-screen bg-[#17191A] p-20">
           <div className="grid grid-cols-3">
-            <Image src="/review-image.png" width={515} height={720} />
-            <div className="col-span-2 bg-white  text-[#191D2B] p-20">
-              <h2 className="font-bold text-5xl leading-snug">
+            <Image
+              src="/review-image.png"
+              width={515}
+              height={720}
+              className="object-cover h-full"
+            />
+            <div className="col-span-2 bg-white  text-[#191D2B] p-10 lg:p-20">
+              <h2 className="font-bold text-3xl lg:text-5xl leading-snug">
                 Highly recommended by our customers
               </h2>
-              <p className="mt-4 text-[#96A0B5] text-lg">
+              <p className="mt-4 text-[#96A0B5] text-sm lg:text-lg">
                 With over 1,000,000+ scans completed and a £30,000 peace of mind
                 data guaranteee see why our customers love us
               </p>
-              <p className="font-medium text-xl leading-normal w-[600px] mt-16">
+              <p className="font-medium text-base lg:text-xl leading-normal lg:w-[600px] mt-8 lg:mt-16">
                 &quot; Excellent. We were buying a second hand car from someone
                 we don’t know. And this site gives you everything you need to
                 know. Highly recommend &quot;
@@ -390,18 +281,35 @@ export default function Home() {
 
               <section className="mt-10 flex justify-between items-center">
                 <div>
-                  <p className="font-medium text-lg">Alexandro Arnold</p>
-                  <div className="flex gap-x-3 mt-2">
+                  <p className="font-medium text-base lg:text-lg">
+                    Alexandro Arnold
+                  </p>
+                  <div className="flex gap-x-2 lg:gap-x-3 mt-2">
                     {Array(5)
                       .fill()
                       .map(() => (
-                        <Image src="/star.svg" width={20} height={20} />
+                        <Image
+                          src="/star.svg"
+                          width={20}
+                          height={20}
+                          className="w-4 h-4 lg:w-5 lg:h-5"
+                        />
                       ))}
                   </div>
                 </div>
                 <div className="flex">
-                  <Image src="/arrow-left.svg" width={48} height={48} />
-                  <Image src="/arrow-right.svg" width={48} height={48} />
+                  <Image
+                    src="/arrow-left.svg"
+                    width={48}
+                    height={48}
+                    className="w-8 h-8 lg:w-12 lg:h-12"
+                  />
+                  <Image
+                    src="/arrow-right.svg"
+                    width={48}
+                    height={48}
+                    className="w-8 h-8 lg:w-12 lg:h-12"
+                  />
                 </div>
               </section>
             </div>
@@ -410,21 +318,25 @@ export default function Home() {
 
         <section className="bg-[#17191A] text-white p-20">
           <div className="flex">
-            <h2 className="font-bold text-[150px] leading-none -mt-5">Find</h2>
-            <div className="w-16 h-16">
+            <h2 className="font-bold text-8xl lg:text-[150px] leading-none lg:-mt-5">
+              Find
+            </h2>
+            <figure className="w-10 h-10 lg:w-16 lg:h-16">
               <Image src="/Vector.png" alt="icon" width={64} height={64} />
-            </div>
+            </figure>
           </div>
-          <h2 className="font-bold text-[150px] leading-none">Vehicle Free</h2>
-          <div className="grid grid-cols-2 gap-14 mt-20">
-            <p className="font-normal text-justify text-lg">
+          <h2 className="font-bold text-8xl lg:text-[150px] leading-none">
+            Vehicle Free
+          </h2>
+          <div className="grid grid-rows-2 lg:grid-cols-2 gap-7 lg:gap-14 mt-20">
+            <p className="font-normal text-justify text-base lg:text-lg">
               All the vital vehicle information you need before you buy a car at
               a glance. We check your vehicle against multiple databases
               including DVLA Vehicle checking service, Experian, MIAFTR
               insurance database and the PNC.
             </p>
-            <div className="flex gap-3">
-              <div className="bg-white p-6 rounded-full flex-1">
+            <div className="flex gap-3 items-center">
+              <div className="bg-white p-3 lg:p-6 rounded-full flex-1">
                 <input
                   type="text"
                   placeholder="Enter Reg"
@@ -432,7 +344,7 @@ export default function Home() {
                 />
               </div>
               <button
-                className="bg-[#BD7254] font-bold text-lg rounded-full py-6 px-10"
+                className="bg-[#BD7254] font-bold lg:text-lg rounded-full p-5 lg:py-6 lg:px-10"
                 type="submit"
               >
                 Check Vehicle
@@ -441,7 +353,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="bg-[#FFFFFF0A] px-20 py-12 flex">
+      <footer className="bg-[#FFFFFF0A] px-20 py-12 flex flex-wrap lg:flex-nowrap">
         <section className="flex flex-col gap-6">
           <p className="font-bold text-lg">Follow Us</p>
           <div className="flex gap-4">
@@ -468,7 +380,7 @@ export default function Home() {
 
         <section className="justify-end flex-1">
           <nav className="hidden md:block">
-            <div className="flex justify-end gap-9">
+            <div className="flex flex-col items-end lg:flex-row lg:justify-end gap-5 lg:gap-9">
               <a
                 href="#"
                 className="text-white-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-bold uppercase"
@@ -506,7 +418,7 @@ export default function Home() {
                 register
               </a>
             </div>
-            <div className="flex justify-end mt-5">
+            <div className="hidden lg:flex justify-end mt-5">
               <a
                 href="#"
                 className="text-[#FFFFFF7A] hover:text-white px-4 py-2 rounded-md text-sm font-normal capitalize"
@@ -529,6 +441,28 @@ export default function Home() {
               </a>
             </div>
           </nav>
+        </section>
+        <section className="block lg:hidden text-center w-full mt-5">
+          <a
+            href="#"
+            className="text-[#FFFFFF7A] hover:text-white px-4 py-2 rounded-md text-sm font-normal capitalize"
+          >
+            Terms & Conditions
+          </a>
+          <a
+            href="#"
+            className="text-[#FFFFFF7A] hover:text-white px-4 py-2 rounded-md text-sm font-normal capitalize"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="#"
+            className="text-[#FFFFFF7A] hover:text-white px-4 py-2 rounded-md text-sm font-normal capitalize"
+          >
+            Copyright©
+            {new Date().getFullYear()}
+            Find® LTD. All rights reserved
+          </a>
         </section>
       </footer>
     </>
