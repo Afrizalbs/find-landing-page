@@ -17,25 +17,25 @@ function NavbarList({ className }) {
         <div className="flex justify-end gap-x-9">
           <a
             href="#"
-            className="text-white-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+            className="text-white-300 rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white"
           >
             Pricing
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+            className="rounded-md px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
           >
             Sample Report
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+            className="rounded-md px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
           >
             Testmony
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+            className="rounded-md px-4 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
           >
             Contact
           </a>
