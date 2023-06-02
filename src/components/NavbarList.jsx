@@ -8,8 +8,8 @@ function NavbarList({ className }) {
     <nav className={className}>
       <Image
         src="/hamburger.png"
-        width={56}
-        height={56}
+        width={40}
+        height={40}
         loading="lazy"
         className="md:hidden"
       />

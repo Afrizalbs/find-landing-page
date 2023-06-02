@@ -8,33 +8,35 @@ import NavbarList from "@/components/NavbarList";
 export default function Home() {
   return (
     <>
-      <section className="bg-cover bg-hero-pattern md:bg-center">
+      <section className="bg-cover bg-hero-pattern bg-center bg-fixed md:bg-local">
         <header className="flex flex-col min-h-screen container mx-auto">
-          <NavbarList className="md:py-9 flex justify-center lg:pt-9 lg:pb-0 lg:justify-end" />
-          <section className="flex">
-            <h1 className="lg:text-[200px] md:text-9xl font-bold -mt-3 lg:-mt-5">
-              Find
-            </h1>
-            <figure className="lg:w-16 lg:h-16 md:w-8 md:h-8">
-              <Image
-                src="/Vector.png"
-                alt="icon"
-                width={64}
-                height={64}
-                priority
-              />
-            </figure>
-            <div className="flex grow justify-end items-center">
-              <p className="font-bold lg:text-6xl lg:w-[470px] md:text-4xl md:w-64">
+          <NavbarList className="px-5 py-9 flex justify-end md:px-0 md:justify-center lg:pt-9 lg:pb-0 lg:justify-end" />
+          <section className="flex flex-col gap-5 md:gap-0 md:flex-row px-5 md:px-0">
+            <div className="flex">
+              <h1 className="text-white text-7xl md:text-9xl lg:text-[200px] font-bold md:-mt-3 lg:-mt-5">
+                Find
+              </h1>
+              <figure className="lg:w-16 lg:h-16 md:w-8 md:h-8 w-6 h-6">
+                <Image
+                  src="/Vector.png"
+                  alt="icon"
+                  width={64}
+                  height={64}
+                  priority
+                />
+              </figure>
+            </div>
+            <div className="flex md:grow md:justify-end md:items-center">
+              <p className="font-bold text-white text-2xl w-3/4 lg:text-6xl lg:w-[470px] md:text-4xl md:w-64">
                 Free Vehicle History Check
               </p>
             </div>
           </section>
         </header>
 
-        <section className="grid grid-cols-5">
-          <div className="box-border bg-white bg-opacity-20 backdrop-blur pl-20 col-span-2 grid content-center md:align-middle">
-            <p className="font-bold text-lg lg:text-3xl">
+        <section className="grid grid-rows-2 grid-flow-col md:grid-flow-row md:grid-rows-none md:grid-cols-5">
+          <div className="box-border bg-white bg-opacity-20 backdrop-blur grid content-center md:pl-20  col-span-3 md:col-span-2  md:align-middle">
+            <p className="font-bold text-lg lg:text-3xl place-self-center md:place-self-auto">
               Verified Instant Car Check.
             </p>
           </div>
@@ -42,41 +44,41 @@ export default function Home() {
             <input
               type="text"
               placeholder="Enter Reg"
-              className="text-black w-full p-2"
+              className="text-black w-full p-2 text-sm md:text-base"
             />
           </div>
           <button
-            className="bg-[#BD7254] font-bold text-base lg:text-lg"
+            className="bg-[#BD7254] font-bold text-sm px-5 md:px-0 md:text-base lg:text-lg"
             type="submit"
           >
             Check Vehicle
           </button>
         </section>
 
-        <section className="grid grid-cols-5">
-          <div className="col-span-2 bg-[#17191A] bg-opacity-60 backdrop-blur pl-20 pr-10  py-5 lg:p-20">
-            <p className="text-sm text-justify lg:font-semibold lg:text-xl">
+        <section className="grid md:grid-cols-5">
+          <div className="col-span-2 bg-[#17191A] bg-opacity-60 backdrop-blur p-10 md:pl-20 md:pr-10 lg:p-20">
+            <p className="text-xs text-justify md:text-sm lg:font-semibold lg:text-xl">
               Whether you’re looking to ensure a fair price for a used vehicle,
               guarantee you get the best price for your current car or something
               else - it’s important to get trusted, accurate and affordable
               vehicle history so you can make a smart decision.
             </p>
           </div>
-          <div className="grid grid-cols-3 col-span-3 place-items-center bg-white bg-opacity-20 backdrop-blur-md md:px-5 gap-1">
+          <div className="grid grid-cols-3 col-span-3 md:place-items-center bg-white bg-opacity-20 backdrop-blur-md px-5 py-5 md:py-0 gap-1">
             <div className="lg:w-40">
-              <p className="font-bold text-xl lg:text-3xl">74,000+</p>
+              <p className="font-bold md:text-xl lg:text-3xl">74,000+</p>
               <p className="text-xs lg:text-sm mt-4">
                 Vehicles were reported lost or stolen in 2020
               </p>
             </div>
             <div className="lg:w-40">
-              <p className="font-bold text-xl lg:text-3xl">1 in 3</p>
+              <p className="font-bold md:text-xl lg:text-3xl">1 in 3</p>
               <p className="text-xs lg:text-sm mt-4">
                 Used cars are sold with outstanding finance
               </p>
             </div>
             <div className="lg:w-40">
-              <p className="font-bold text-xl lg:text-3xl">1 in 12</p>
+              <p className="font-bold md:text-xl lg:text-3xl">1 in 12</p>
               <p className="text-xs lg:text-sm mt-4">
                 Used cars are listed as insurance write-offs
               </p>
@@ -86,33 +88,33 @@ export default function Home() {
       </section>
 
       <main>
-        <section className="p-20 bg-[#17191A]">
-          <div className="grid grid-cols-3">
+        <section className="p-10 md:p-20 bg-[#17191A]">
+          <div className="grid md:grid-cols-3">
             <Image
               src="/Arrow-down.png"
               alt="bg-icon"
               width={300}
               height={300}
               loading="lazy"
-              className="w-[170px] h-[170px] lg:w-[300px] lg:h-[300px]"
+              className="w-[170px] h-[170px] hidden md:block lg:w-[300px] lg:h-[300px]"
             />
-            <p className="col-span-2 font-bold text-2xl lg:text-5xl leading-tight text-justify">
+            <p className="md:col-span-2 font-bold text-xl md:text-2xl lg:text-5xl leading-relaxed lg:leading-tight text-center md:text-justify">
               In a matter of seconds, we check your vehicle against the major
               databases to make sure everything is as you expect it to be. You
               get all the relevant information to give you peace of mind over
               your purchase.
             </p>
-            <div> </div>
-            <div className="col-span-2 mt-16 grid grid-cols-2 gap-16">
+            <div className="hidden md:block"> </div>
+            <div className="md:col-span-2 mt-16 grid md:grid-cols-2 gap-16">
               {Array(4)
                 .fill()
                 .map(() => (
                   <div>
                     <Image src="/header-section.png" width={384} height={72} />
-                    <p className="font-bold text-xl lg:text-2xl my-6">
+                    <p className="font-bold text-lg md:text-xl lg:text-2xl my-6">
                       Technical Specifications
                     </p>
-                    <p className="font-medium text-sm lg:text-base">
+                    <p className="font-medium text-justify md:text-left text-xs md:text-sm lg:text-base">
                       Understanding vehicle specs like dimensions, BPH and
                       anti-lock braking system is crucial. All this and more can
                       be found out when you undertake our free car check.
@@ -124,12 +126,12 @@ export default function Home() {
         </section>
 
         <section className="bg-white">
-          <div className="container mx-auto py-10">
+          <div className="container mx-auto px-5 md:px-0 py-10">
             <div className="flex">
-              <h2 className="text-[#191D2B] font-bold text-9xl lg:text-[150px] leading-none">
+              <h2 className="text-[#191D2B] font-bold text-5xl md:text-9xl lg:text-[150px] leading-none">
                 Find
               </h2>
-              <figure className="w-10 h-10 lg:w-16 lg:h-16">
+              <figure className="w-6 h-6 md:w-10 md:h-10 lg:w-16 lg:h-16">
                 <Image
                   src="/Vector-black.png"
                   alt="icon"
@@ -138,13 +140,13 @@ export default function Home() {
                 />
               </figure>
             </div>
-            <h2 className="text-[#191D2B] font-bold text-9xl lg:text-[150px] leading-none">
+            <h2 className="text-[#191D2B] font-bold text-5xl md:text-9xl lg:text-[150px] leading-none">
               Experience
             </h2>
 
-            <div className="mt-24 grid grid-cols-3">
-              <div className="col-span-1 flex flex-col justify-between">
-                <p className="text-base font-medium text-[#191D2B] text-justify pr-10">
+            <div className="mt-10 md:mt-24 grid md:grid-cols-3">
+              <div className="md:col-span-1 flex flex-col md:justify-between">
+                <p className="text-base font-medium text-[#191D2B] text-justify md:pr-10">
                   We provide a verified service that gives you access to any
                   vehicle’s full history in one easy-to understand report. With
                   Find, you instantly view the data that matters to you and know
@@ -152,7 +154,7 @@ export default function Home() {
                   below for why thousands of people across the UK choose OUR
                   instant car check.
                 </p>
-                <div className="justify-end">
+                <div className="hidden md:block md:justify-end">
                   <button
                     type="button"
                     className="bg-[#191D2B] px-10 py-4 rounded-full text-sm lg:text-base"
@@ -161,7 +163,7 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="col-span-2 grid grid-cols-2 gap-x-16 gap-y-10">
+              <div className="md:col-span-2 grid md:grid-cols-2 gap-x-16 gap-y-10 mt-10 md:mt-0">
                 {Array(6)
                   .fill()
                   .map(() => (
@@ -186,9 +188,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-pricing bg-cover">
-          <div className="grid grid-cols-3 min-h-screen">
-            <div className="px-10 py-20 lg:p-20 flex flex-col">
+        <section className="bg-pricing bg-cover bg-center bg-fixed">
+          <div className="grid md:grid-cols-3 min-h-screen">
+            <div className="px-5 md:px-10 py-20 lg:p-20 flex flex-col">
               <h3 className="font-bold text-4xl lg:text-6xl mb-10">Pricing</h3>
               <p className="font-light text-sm lg:text-lg text-justify flex-1">
                 Find offer the most comprehensive free car check on the market -
@@ -202,7 +204,7 @@ export default function Home() {
                 src="/arrow-right-white.svg"
                 width={72}
                 height={72}
-                className="w-14 h-14 lg:h-[72px] lg:w-[72px] "
+                className="w-14 h-14 lg:h-[72px] lg:w-[72px] rotate-45 md:rotate-0 mt-10 md:mt-0"
               />
             </div>
             <div className="bg-[#454547CC] px-10 py-20 lg:p-20 flex flex-col">
@@ -212,7 +214,7 @@ export default function Home() {
                 {Array(5)
                   .fill()
                   .map(() => (
-                    <div className="flex gap-5">
+                    <div className="flex gap-5 items-center">
                       <Image src="/tick-circle.svg" width={24} height={24} />
                       <p className="text-sm lg:text-base">
                         Vehicle Make, Model Colour
@@ -220,7 +222,7 @@ export default function Home() {
                     </div>
                   ))}
               </div>
-              <div>
+              <div className="mt-10 md:mt-0">
                 <button
                   type="button"
                   className="bg-white text-[#191D2B] font-bold text-sm lg:text-lg px-10 py-4 rounded-full"
@@ -237,7 +239,7 @@ export default function Home() {
                 {Array(5)
                   .fill()
                   .map(() => (
-                    <div className="flex gap-5">
+                    <div className="flex gap-5 items-center">
                       <Image src="/tick-circle.svg" width={24} height={24} />
                       <p className="text-sm lg:text-base">
                         Vehicle Make, Model Colour
@@ -245,7 +247,7 @@ export default function Home() {
                     </div>
                   ))}
               </div>
-              <div>
+              <div className="mt-10 md:mt-0">
                 <button
                   type="button"
                   className="bg-white text-[#191D2B] font-bold text-sm lg:text-lg px-10 py-4 rounded-full"
@@ -257,23 +259,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="max-h-screen bg-[#17191A] p-20">
-          <div className="grid grid-cols-3">
+        <section className="md:max-h-screen bg-[#17191A] md:p-20">
+          <div className="grid md:grid-cols-3">
             <Image
               src="/review-image.png"
               width={515}
               height={720}
               className="object-cover h-full"
             />
-            <div className="col-span-2 bg-white  text-[#191D2B] p-10 lg:p-20">
-              <h2 className="font-bold text-3xl lg:text-5xl leading-snug">
+            <div className="md:col-span-2 bg-white  text-[#191D2B] p-10 lg:p-20">
+              <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl leading-snug">
                 Highly recommended by our customers
               </h2>
               <p className="mt-4 text-[#96A0B5] text-sm lg:text-lg">
                 With over 1,000,000+ scans completed and a £30,000 peace of mind
                 data guaranteee see why our customers love us
               </p>
-              <p className="font-medium text-base lg:text-xl leading-normal lg:w-[600px] mt-8 lg:mt-16">
+              <p className="font-medium text-xs md:text-base lg:text-xl leading-normal lg:w-[600px] mt-8 lg:mt-16">
                 &quot; Excellent. We were buying a second hand car from someone
                 we don’t know. And this site gives you everything you need to
                 know. Highly recommend &quot;
@@ -316,26 +318,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#17191A] text-white p-20">
+        <section className="bg-[#17191A] text-white px-5 py-10 md:p-20">
           <div className="flex">
-            <h2 className="font-bold text-8xl lg:text-[150px] leading-none lg:-mt-5">
+            <h2 className="font-bold text-5xl md:text-8xl lg:text-[150px] leading-none lg:-mt-5">
               Find
             </h2>
-            <figure className="w-10 h-10 lg:w-16 lg:h-16">
+            <figure className="w-6 h-6 md:w-10 md:h-10 lg:w-16 lg:h-16">
               <Image src="/Vector.png" alt="icon" width={64} height={64} />
             </figure>
           </div>
-          <h2 className="font-bold text-8xl lg:text-[150px] leading-none">
+          <h2 className="font-bold text-5xl md:text-8xl lg:text-[150px] leading-none">
             Vehicle Free
           </h2>
-          <div className="grid grid-rows-2 lg:grid-cols-2 gap-7 lg:gap-14 mt-20">
+          <div className="grid md:grid-rows-2 lg:grid-cols-2 gap-7 lg:gap-14 mt-10 md:mt-20">
             <p className="font-normal text-justify text-base lg:text-lg">
               All the vital vehicle information you need before you buy a car at
               a glance. We check your vehicle against multiple databases
               including DVLA Vehicle checking service, Experian, MIAFTR
               insurance database and the PNC.
             </p>
-            <div className="flex gap-3 items-center">
+            <div className="flex flex-col md:flex-row gap-3 md:items-center">
               <div className="bg-white p-3 lg:p-6 rounded-full flex-1">
                 <input
                   type="text"
@@ -344,7 +346,7 @@ export default function Home() {
                 />
               </div>
               <button
-                className="bg-[#BD7254] font-bold lg:text-lg rounded-full p-5 lg:py-6 lg:px-10"
+                className="bg-[#BD7254] font-bold lg:text-lg rounded-full p-5 lg:py-8 lg:px-10"
                 type="submit"
               >
                 Check Vehicle
@@ -353,8 +355,8 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="bg-[#FFFFFF0A] px-20 py-12 flex flex-wrap lg:flex-nowrap">
-        <section className="flex flex-col gap-6">
+      <footer className="bg-[#FFFFFF0A] px-10 md:px-20 py-12 flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap">
+        <section className="flex flex-col gap-6 items-center md:items-start">
           <p className="font-bold text-lg">Follow Us</p>
           <div className="flex gap-4">
             <Image
@@ -442,7 +444,7 @@ export default function Home() {
             </div>
           </nav>
         </section>
-        <section className="block lg:hidden text-center w-full mt-5">
+        <section className="flex flex-col md:flex-row lg:hidden text-center md:justify-center w-full mt-5">
           <a
             href="#"
             className="text-[#FFFFFF7A] hover:text-white px-4 py-2 rounded-md text-sm font-normal capitalize"
