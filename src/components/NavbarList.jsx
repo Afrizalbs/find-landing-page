@@ -1,17 +1,29 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Image from "next/image";
-import React from "react";
+
+"use client";
+
+// import Image from "next/image";
+import React, { useState } from "react";
+import NavbarMobile from "./NavbarMobile";
 
 function NavbarList({ className }) {
+  const [sidebar, setSidebar] = useState(false);
   return (
     <nav className={className}>
-      <Image
-        src="/hamburger.png"
-        width={40}
-        height={40}
-        loading="lazy"
-        className="md:hidden"
+      {/* <button type="button" onClick={() => setSidebar(!sidebar)}>
+        <Image
+          src="/hamburger.png"
+          width={40}
+          height={40}
+          loading="lazy"
+          className="md:hidden"
+          alt="sidebar-icon"
+        />
+      </button> */}
+      <NavbarMobile
+        sidebarOpen={sidebar}
+        onClick={() => setSidebar(!sidebar)}
       />
       <div className="hidden md:block">
         <div className="flex justify-end gap-x-9">
