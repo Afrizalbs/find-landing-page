@@ -6,6 +6,118 @@ import Image from "next/image";
 import NavbarList from "@/components/NavbarList";
 
 export default function Home() {
+  const introduceFeatures = [
+    {
+      image: "/header-section.png",
+      title: "Technical Specifications",
+      subtitle:
+        "Understanding vehicle specs like dimensions, BPH and anti-lock braking system is crucial. All this and more can be found out when you undertake our free car check.",
+    },
+    {
+      image: "/header-section.png",
+      title: "Mileage Timeline",
+      subtitle:
+        "Quickly understand how many miles a car has done as of its last mileage reading. You can also see if anyone has tampered with the odometer.",
+    },
+    {
+      image: "/header-section.png",
+      title: "Plate Changes",
+      subtitle:
+        "It’s not unusual for someone to change the plates on a car, but there are times when people do it so they can hide the vehicle's record.",
+    },
+    {
+      image: "/header-section.png",
+      title: "Running Costs",
+      subtitle:
+        "Fuel, tax and insurance are just some of the necessary evils that contribute to the cost of running your car. You can find out what to expect with our check.",
+    },
+  ];
+
+  const featureChecks = [
+    {
+      icon: "/arrow-right.svg",
+      title: "Car Finance Check",
+      subtitle:
+        "This isn’t a step you want to skip. The last thing you want is to finally get your hands on your nice new car, only to find out there’s outstanding finance that you need to cover. It’s a costly mistake, but one you can avoid easily with our car finance check.",
+    },
+    {
+      icon: "/arrow-right.svg",
+      title: "Write Off Check",
+      subtitle:
+        "An insurance write off hugely devalues your car and, sometimes, the less savoury of us out there can leave this crucial detail out. We review insurance records to check if your car has been in an accident - so you can be confident that your new pride and joy really is new.",
+    },
+    {
+      icon: "/arrow-right.svg",
+      title: "Stolen Car Check",
+      subtitle:
+        "You wouldn’t be the first person to buy a stolen car. Not only can it lead to problems with the police, you’ll also have to give the car back to its rightful owner. Our stolen checks mean you don’t have to worry about buying a car that should never have been sold in the first place!",
+    },
+    {
+      icon: "/arrow-right.svg",
+      title: "Car Owner Check",
+      subtitle:
+        "We delve deep into the history of the car and its owners with our keepers check, covering important facts like how many owners the car has had and how often it’s changed hands. With this, you can make the right decision about your new car with complete confidence.",
+    },
+    {
+      icon: "/arrow-right.svg",
+      title: "Export / Import Check",
+      subtitle:
+        "Buying a car with cloned plates is a serious error - as is finding out the car has incorrect documentation. It’s important to know if your car is an import or an export so you can relax knowing that your new vehicle is 100% legitimate with no risk of documentation issues.",
+    },
+    {
+      icon: "/arrow-right.svg",
+      title: "MOT History Check",
+      subtitle:
+        "When buying a new car, it’s important to know if the previous owners have looked after it. MOT status, the car’s history and a full analysis of work done is covered in our MOT history check - so you can be sure you’re not about to enter a relationship with ‘damaged goods.’",
+    },
+  ];
+
+  const freeFeatures = [
+    {
+      icon: "",
+      label: "Vehicle Make, Model Colour",
+    },
+    {
+      icon: "",
+      label: "Engine Specifications",
+    },
+    {
+      icon: "",
+      label: "Vehicle Type Emissions",
+    },
+    {
+      icon: "",
+      label: "Mileage History",
+    },
+    {
+      icon: "",
+      label: "Tax MOT Expiry",
+    },
+  ];
+
+  const premiumFeatures = [
+    {
+      icon: "",
+      label: "Same as free",
+    },
+    {
+      icon: "",
+      label: "Vehicle Specifications",
+    },
+    {
+      icon: "",
+      label: "Vehicle Performance",
+    },
+    {
+      icon: "",
+      label: "Full MOT History",
+    },
+    {
+      icon: "",
+      label: "Mileage Anomalies",
+    },
+  ];
+
   return (
     <>
       <section className="bg-hero-pattern bg-cover bg-fixed bg-center md:bg-local">
@@ -106,21 +218,22 @@ export default function Home() {
             </p>
             <div className="hidden md:block"> </div>
             <div className="mt-16 grid gap-16 md:col-span-2 md:grid-cols-2">
-              {Array(4)
-                .fill()
-                .map(() => (
-                  <div>
-                    <Image src="/header-section.png" width={384} height={72} />
-                    <p className="my-6 text-lg font-bold md:text-xl lg:text-2xl">
-                      Technical Specifications
-                    </p>
-                    <p className="text-justify text-xs font-medium md:text-left md:text-sm lg:text-base">
-                      Understanding vehicle specs like dimensions, BPH and
-                      anti-lock braking system is crucial. All this and more can
-                      be found out when you undertake our free car check.
-                    </p>
-                  </div>
-                ))}
+              {introduceFeatures.map((feature) => (
+                <div>
+                  <Image
+                    src={feature.image}
+                    width={384}
+                    height={72}
+                    alt={feature.image}
+                  />
+                  <p className="my-6 text-lg font-bold md:text-xl lg:text-2xl">
+                    {feature.title}
+                  </p>
+                  <p className="text-justify text-xs font-medium md:text-left md:text-sm lg:text-base">
+                    {feature.subtitle}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -164,25 +277,24 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-10 grid gap-x-16 gap-y-10 md:col-span-2 md:mt-0 md:grid-cols-2">
-                {Array(6)
-                  .fill()
-                  .map(() => (
-                    <div className="group border-t-2 border-[#191D2B] pt-6 hover:border-[#BD7254]">
-                      <div className="flex gap-6">
-                        <p className="text-xl font-bold text-[#191D2B] group-hover:text-[#BD7254] lg:text-2xl">
-                          Car Finance Check
-                        </p>
-                        <Image src="/arrow-right.svg" width={24} height={24} />
-                      </div>
-                      <p className="mt-6 text-justify text-sm font-medium text-[#96A0B5] lg:text-base">
-                        This isn’t a step you want to skip. The last thing you
-                        want is to finally get your hands on your nice new car,
-                        only to find out there’s outstanding finance that you
-                        need to cover. It’s a costly mistake, but one you can
-                        avoid easily with our car finance check.
+                {featureChecks.map((check) => (
+                  <div className="group border-t-2 border-[#191D2B] pt-6 hover:border-[#BD7254]">
+                    <div className="flex gap-6">
+                      <p className="text-xl font-bold text-[#191D2B] group-hover:text-[#BD7254] lg:text-2xl">
+                        {check.title}
                       </p>
+                      <Image
+                        src={check.icon}
+                        width={24}
+                        height={24}
+                        alt="arrow-right-icon"
+                      />
                     </div>
-                  ))}
+                    <p className="mt-6 text-justify text-sm font-medium text-[#96A0B5] lg:text-base">
+                      {check.subtitle}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -211,16 +323,12 @@ export default function Home() {
               <h3 className="text-4xl font-bold lg:text-6xl">FREE</h3>
               <p className="mt-2">Free Car Check</p>
               <div className="mt-10 flex flex-1 flex-col gap-y-6">
-                {Array(5)
-                  .fill()
-                  .map(() => (
-                    <div className="flex items-center gap-5">
-                      <Image src="/tick-circle.svg" width={24} height={24} />
-                      <p className="text-sm lg:text-base">
-                        Vehicle Make, Model Colour
-                      </p>
-                    </div>
-                  ))}
+                {freeFeatures.map((feature) => (
+                  <div className="flex items-center gap-5">
+                    <Image src="/tick-circle.svg" width={24} height={24} />
+                    <p className="text-sm lg:text-base">{feature.label}</p>
+                  </div>
+                ))}
               </div>
               <div className="mt-10 md:mt-0">
                 <button
@@ -236,16 +344,12 @@ export default function Home() {
               <h3 className="text-4xl font-bold lg:text-6xl">$19.99</h3>
               <p className="mt-2">Full Car Check</p>
               <div className="mt-10 flex flex-1 flex-col gap-y-6">
-                {Array(5)
-                  .fill()
-                  .map(() => (
-                    <div className="flex items-center gap-5">
-                      <Image src="/tick-circle.svg" width={24} height={24} />
-                      <p className="text-sm lg:text-base">
-                        Vehicle Make, Model Colour
-                      </p>
-                    </div>
-                  ))}
+                {premiumFeatures.map((feature) => (
+                  <div className="flex items-center gap-5">
+                    <Image src="/tick-circle.svg" width={24} height={24} />
+                    <p className="text-sm lg:text-base">{feature.label}</p>
+                  </div>
+                ))}
               </div>
               <div className="mt-10 md:mt-0">
                 <button
